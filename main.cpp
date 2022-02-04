@@ -12,16 +12,21 @@
 
 #include <memory>
 
+#include "AuthData.h"
 
 using namespace nlohmann;
 
 int main() {
-	//cWebRestApi restApi;
-	//restApi.GetRequest(284);
+	json jObject;
 
-	cFileRestApi restApi("data.json");
+	cWebRestApi restApi(AUTH::SERVER_ADRESS, AUTH::APIKEY, AUTH::QUERRY_ID);
+	//cFileRestApi restApi("data.json");
 
-	json jObject = restApi.GetParsedResponse();
+	if(restApi.GetRequest())
+	{
+		jObject = restApi.GetParsedResponse();
+	}
+	
 
 	std::vector<std::shared_ptr<cWorkObject>> workobjects;
 

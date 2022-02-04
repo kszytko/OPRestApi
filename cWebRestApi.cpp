@@ -3,7 +3,7 @@
 
 
 
-bool cWebRestApi::GetRequest(size_t querryID) {
+bool cWebRestApi::GetRequest() {
 	// initialize RestClient
 	RestClient::init();
 
@@ -42,5 +42,8 @@ nlohmann::json cWebRestApi::GetParsedResponse() const {
 		{
 			std::cout << e.what() << std::endl;
 		}
+	}
+	else {
+		return nlohmann::json();
 	}
 }

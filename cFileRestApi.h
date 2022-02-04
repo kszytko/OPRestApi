@@ -11,16 +11,11 @@ public:
 
 private:
 	std::string filename;
-	
+	std::ifstream ifs;
 
 
 public:
-
-	nlohmann::json GetParsedResponse() const {
-		std::ifstream ifs(filename, std::ios::binary);
-
-		return nlohmann::json::parse(ifs);
-
-	};
+	bool GetRequest()  override;
+	nlohmann::json GetParsedResponse() const;
 
 };

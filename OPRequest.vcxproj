@@ -141,6 +141,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AuthData.h" />
     <ClInclude Include="cFileRestApi.h" />
     <ClInclude Include="cMachine.h" />
     <ClInclude Include="cMachineTask.h" />
@@ -149,6 +150,7 @@
     <ClInclude Include="cWorkObject.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cFileRestApi.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="cWebRestApi.cpp" />
   </ItemGroup>
