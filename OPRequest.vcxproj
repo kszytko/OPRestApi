@@ -146,6 +146,7 @@
     <ClInclude Include="cMachineTask.h" />
     <ClInclude Include="cWebRestApi.h" />
     <ClInclude Include="cRestApi.h" />
+    <ClInclude Include="cWorkObject.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

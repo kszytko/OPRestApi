@@ -1,20 +1,33 @@
 #pragma once
-#include <string>
-struct cMachine
+#include "cWorkObject.h"
+
+class cMachine : public cWorkObject
 {
-	size_t	id;
-	size_t	opid;
+public:
+	void print() const override{
+		std::cout << type << "\n" 
+			<< " id           :  " << id << "\n"
+			<< " number       :  " << number << "\n"
+			<< " machineName  :  " << machineName << "\n"
+			<< " description  :  " << description << "\n"
+			<< " loginName    :  " << loginName << "\n"
+			<< " wanIp        :  " << wanIp << "\n"
+			<< " lanIp        :  " << lanIp << "\n"
+			<< " teamViewerId :  " << teamViewerId << "\n"
+			<< " projectName  :  " << projectName << "\n"
+			<< " status       :  " << status << "\n\n";
+	}
+public:
+	size_t	number;
 	std::string machineName;
 	std::string description;
 	std::string loginName;
-	std::string type;
 	std::string wanIp;
 	std::string lanIp;
 	std::string vmPort;
-	std::string teamViewerId;
+	size_t teamViewerId;
 	std::string projectName;
-	std::string parentID;
-	std::string parentName;
 	std::string status;
+
 };
 
